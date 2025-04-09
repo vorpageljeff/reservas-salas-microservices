@@ -1,0 +1,119 @@
+.containerGeral {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 3px solid #0077C8;
+    background-color: white;
+}
+
+.boxLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divInputs {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    justify-content: center;
+}
+
+.inputStyle {
+    width: 90%;
+    color: black;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    margin-left: 2%;
+}
+
+.inputStyle:focus {
+    outline: none;
+}
+
+.divPass {
+    margin-top: 5%;
+}
+
+.divPass, .divUser {
+    height: 50%;
+}
+
+.divInputImg {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    background-color: #d9d9d9;
+}
+
+.passImg, .userImg {
+    width: 5%;
+}
+
+.divBtns {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+
+#singIn {
+    width: 230px;
+    height: 70px;
+    background-color: #0077C8;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 3%;
+    border-radius: 10px;
+}
+
+#singIn:hover {
+    background-color: #00659b;
+}
+
+.forgotPass {
+    color: blue;
+}
+
+.forgotPass:hover {
+    cursor: pointer;
+}
+
+.boxRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgLogo {
+    width: 70%;
+    height: 60%;
+}
+
+.errorMsg {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}

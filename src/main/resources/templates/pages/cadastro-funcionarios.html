@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Funcionários | Ambiente-se!</title>
+</head>
+<body>
+<content>
+    <div class="content-container">
+    <div class="containerGeral">
+       <!-- <div class="divSelect">
+           <div class="selectBox">
+               <select name="select" id="select">
+                   <option value="id" selected>Id</option>
+                   <option value="nome">Nome</option>
+               </select>
+               <input type="text" id="search" class="inpFilter" placeholder="Pesquisar id...">
+               <img src="/Icons/Cadastro-Empresa/search.png" alt="Pesquisar" class="imgSearch">
+           </div> -->
+        <div class="divFunc">
+            <table class="tableFunc">
+               <thead>
+                    <tr>
+                        <th class="thTable" id="thImg"></th>
+                        <th class="thTable" id="thId">Id</th>
+                        <th class="thTable" id="thNome">Nome</th>
+                        <th class="thTable" id="thFuncao">Função</th>
+                        <th class="thTable btnAdd" id="thAcao">Novo registro</th>
+                    </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+        </div>
+       <div class="divBtns">
+           <button id="priorBtnFunc"> 🡰 </button>
+           <button id="nextBtnFunc"> 🡲 </button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="divAddFunc">
+        <div class="containerAddFunc">
+            <div class="boxLeft">
+                <label for="nomeAdd" class="labelStyle">Nome</label>
+                <input type="text" class="inpStyle inputName" id="nomeAdd" placeholder="Nome Completo do Funcionário">
+                <label for="emailAdd" class="labelStyle">Email</label>
+                <input type="email" class="inpStyle" id="emailAdd" placeholder="email@email.com">
+                <label for="loginAdd" class="labelStyle">Login</label>
+                <input type="text" class="inpStyle" id="loginAdd" placeholder="Login do Usuário">
+                <label for="cargoAdd" class="labelStyle">Cargo</label>
+                <select name="cargo" id="cargoAdd" class="inpStyle">
+                    <option value="Consultor">Consultor</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+            </div>
+            <div class="boxRight">
+                <label for="cpfAdd" class="labelStyle">CPF</label>
+                <input type="text" class="inpStyle inputCpf" id="cpfAdd" placeholder="000.000.000-00">
+                <label for="dataNascAdd" class="labelStyle">Data de Nascimento</label>
+                <input type="text" class="inpStyle inputNasc" id="dataNascAdd" placeholder="__/__/____">
+                <label for="senhaAdd" class="labelStyle">Senha</label>
+                <input type="password" class="inpStyle" id="senhaAdd" placeholder="Senha do Usuário">
+                <!-- <span class="labelStyle">Gênero</span>
+                <div class="containerGenero">
+                    <input type="checkbox" name="genero" class="genBox" id="MascAdd" value="M" onchange="updateCheckbox('M')">
+                    <label for="MascAdd" class="labelStyle">Masculino</label>
+                    <input type="checkbox" name="genero" class="genBox" id="FemAdd" value="F" onchange="updateCheckbox('F')">
+                    <label for="FemAdd" class="labelStyle">Feminino</label>
+                    <br>
+                    <input type="checkbox" name="genero" class="genBox" id="OutrosAdd" value="O" onchange="updateCheckbox('O')">
+                    <label for="OutrosAdd" class="labelStyle">Outros</label>
+                </div> -->
+            </div>
+        </div>
+        <div class="divBtnAdd">
+            <button class="btnStyle btnsCancel" id="cancelAdd">Cancelar</button>
+            <button class="btnStyle btnsConfirm" id="confirmAdd">Adicionar</button>
+        </div>
+    </div>
+    <div class="divEditFunc">
+        <div class="containerEditFunc">
+            <div class="boxLeft">
+                <label for="nomeEdit" class="labelStyle">Nome</label>
+                <input type="text" class="inpStyle inputName" id="nomeEdit" placeholder="Nome Completo do Funcionário">
+                <label for="emailEdit" class="labelStyle">Email</label>
+                <input type="email" class="inpStyle" id="emailEdit" placeholder="email@email.com">
+                <label for="loginEdit" class="labelStyle">Login</label>
+                <input type="text" class="inpStyle" id="loginEdit" placeholder="Login do Usuário">
+                <label for="cargoEdit" class="labelStyle">Cargo</label>
+                <select name="cargo" id="cargoEdit" class="inpStyle">
+                    <option value="Consultor">Consultor</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+            </div>
+            <div class="boxRight">
+                <label for="cpfEdit" class="labelStyle">CPF</label>
+                <input type="text" class="inpStyle inputCpf" id="cpfEdit" placeholder="000.000.000-00">
+                <label for="dataNascEdit" class="labelStyle">Data de Nascimento</label>
+                <input type="text" class="inpStyle inputNasc" id="dataNascEdit" placeholder="__/__/____">
+                <!-- <span class="labelStyle">Gênero</span>
+                <div class="containerGenero">
+                    <input type="checkbox" name="genero" class="genBox" id="MascEdit" value="M" onchange="updateCheckbox('M')">
+                    <label for="MascEdit" class="labelStyle">Masculino</label>
+                    <input type="checkbox" name="genero" class="genBox" id="FemEdit" value="F" onchange="updateCheckbox('F')">
+                    <label for="FemEdit" class="labelStyle">Feminino</label>
+                    <br>
+                    <input type="checkbox" name="genero" class="genBox" id="OutrosEdit" value="O" onchange="updateCheckbox('O')">
+                    <label for="OutrosEdit" class="labelStyle">Outros</label>
+                </div> -->
+            </div>
+        </div>
+        <div class="divBtnEdit">
+            <button class="btnStyle btnsCancel" id="cancelEdit">Cancelar</button>
+            <button class="btnStyle btnsConfirm" id="confirmEdit">Editar</button>
+        </div>
+    </div>
+    <div class="divDeleteFunc">
+        <h1 class="deleteMsg" style="font-size: 20px;">Deseja realmente excluir o registro?</h1>
+        <div class="divBtnDelete">
+            <button class="btnStyle btnsCancel btnsDelete" id="cancelDelete">Cancelar</button>
+            <button class="btnStyle btnsConfirm btnsDelete" id="confirmDelete">Excluir</button>
+        </div>
+    </div>
+    </div>
+</content>
+
+<styles>
+    <link rel="stylesheet" th:href="@{/styles/pages/cadastro-empresas.css}"/>
+    <link rel="stylesheet" th:href="@{/styles/pages/cadastro-funcionarios.css}"/>
+</styles>
+</body>
+</html>

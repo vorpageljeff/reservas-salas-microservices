@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login | Ambiente-se </title>
+    <link rel="shortcut icon" th:href="@{/icons/favicon.png}"/>
+</head>
+<body>
+<content>
+    <div class="containerGeral">
+        <div class="box">
+            <div class="boxLeft">
+                <h1 style="text-align: center; font-size: 50px;">Login</h1>
+                <div class="divInputs">
+                    <form id="login">
+                        <div class="divUser">
+                            <label for="user" style="font-size: 25px;">Usuário:</label>
+                            <div class="divInputImg">
+                                <img class="userImg" th:src="@{/icons/user.png}" alt="User">
+                                <input type="text" class="inputStyle" name="username" id="user" placeholder="Digite aqui...">
+                            </div>
+                        </div>
+                        <div class="divPass">
+                            <label for="password" style="font-size: 25px;">Senha:</label>
+                            <div class="divInputImg">
+                                <img class="passImg" th:src="@{/icons/padlock.png}" alt="Pass">
+                                <input type="password" class="inputStyle" name="password" id="password" placeholder="Digite aqui...">
+                            </div>
+                        </div>
+                <div class="divBtns">
+                    <button id="singIn">Entrar</button>
+                    <!-- <span class="forgotPass"><u>Esqueci minha senha</u></span> -->
+                </div>
+                </form>
+            </div>
+            </div>
+            <div class="boxRight">
+                <img class="imgLogo" th:src="@{/icons/logo2.png}" alt="LogoAmbientese">
+            </div>
+        </div>
+    </div>
+</content>
+
+<styles>
+    <link rel="stylesheet" th:href="@{/styles/pages/login.css}"/>
+</styles>
+</body>
+</html>

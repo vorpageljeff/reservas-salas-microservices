@@ -1,0 +1,267 @@
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.containerGeral {
+    width: 100%;
+    height: 100%;
+}
+
+.divSelect {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.selectBox {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0077C8;
+    border-radius: 7px;
+    margin-right: 5%;
+}
+
+#select {
+    width: 30%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.inpFilter {
+    width: 65%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.imgSearch {
+    width: 8%;
+    margin-right: 3%;
+}
+
+.btnAdd {
+    color: white;
+    font-size: 26px;
+    background-color: #0077C8;
+    cursor: pointer;
+}
+
+.divFunc {
+    width: 100%;
+    max-height: 84%;
+    overflow: auto;
+    margin-top: 45px;
+    margin-bottom: 1%;
+}
+
+.tableFunc {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+    border-collapse: collapse;
+}
+
+.imgStyle {
+    width: 45px;
+    height: 45px;
+    margin-left: 8%;
+    padding: 5px;
+    margin-top: 2%;
+    border: 3px solid #0077C8;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.thTable {
+    font-size: 32px;
+}
+
+#thId {
+    width: 3%;
+}
+
+#thImg {
+    width: 5%;
+    border: none;
+}
+
+#thAcao {
+    width: 18%;
+}
+
+.thStyle {
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+}
+
+.azul {
+    background-color: #C2DFF2;
+}
+
+.thImg {
+    width: 35px;
+    height: 35px;
+}
+
+.divBtns {
+    display: flex;
+    justify-content: end;
+    width: 95%;
+    height: 8%;
+}
+
+#priorBtnFunc, #nextBtnFunc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3%;
+    height: 80%;
+    border: 3px solid #0077C8;
+    background-color: white;
+    font-size: 30px;
+    cursor: pointer;
+    color: blue;
+}
+
+#nextBtn {
+    margin-left: 1%;
+}
+
+#priorBtn, #nextBtn:disabled {
+    background-color: #525252;
+    color: #000000;
+    border: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.divAddFunc, .divEditFunc, .divDeleteFunc, .divDeleteEmp {
+    display: none;
+    width: 45%;
+    height: 45%;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.divDeleteFunc, .divDeleteEmp {
+    width: auto;
+    height: auto;
+}
+
+.containerAddFunc, .containerEditFunc {
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.boxLeft {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+}
+
+.boxRight {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.inpStyle {
+    font-size: 24px;
+    width: 65%;
+    height: 10%;
+    border: 1px solid rgb(183, 183, 183);
+    border-radius: 5px;
+}
+
+.inputName {
+    width: 95%;
+}
+
+.inputCpf {
+    width: 60%;
+}
+
+.inputNasc {
+    width: 45%;
+}
+
+.genBox {
+    width: 20px;
+    height: 20px;
+}
+
+.labelStyle {
+    margin-top: 2%;
+    font-size: 22px;
+}
+
+.divBtnAdd, .divBtnEdit, .divBtnDelete {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnStyle {
+    width: 20%;
+    height: 80%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnsDelete {
+    width: 30%;
+}
+
+.btnsConfirm {
+    color: blue;
+    margin-left: 2%;
+}
+
+.btnsCancel {
+    color: red;
+}
+
+.btnsEmp {
+    width: 10%;
+}

@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: calc(100vh - 80px);
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--main-blue);
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content.hidden {
+    display: none;
+}
+
+.toast {
+    position: fixed;
+    top: 15vh;
+    right: 20px;
+    background-color: #333;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast.info {
+    background-color: #3498db; /* Cor de fundo para mensagens de informação */
+}
+
+.toast.success {
+    background-color: #2ecc71; /* Cor de fundo para mensagens de sucesso */
+}
+
+.toast.error {
+    background-color: #e74c3c; /* Cor de fundo para mensagens de erro */
+}
+
+.toast.show {
+    opacity: 1; /* Mostrar o toast quando a classe 'show' for aplicada */
+}

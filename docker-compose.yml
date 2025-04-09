@@ -1,55 +1,26 @@
 version: '3.8'
 services:
-  usuario-service:
-    build: ./usuario-service
-    ports:
-      - "8081:8080"
-    depends_on:
-      - usuario-db
-      - rabbitmq
-
-  usuario-db:
-    image: mysql:8
+  db:
+    image: mysql:8.0
+    container_name: mysql
     environment:
-      MYSQL_DATABASE: usuario
       MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3307:3306"
+      MYSQL_DATABASE: ambienteseTest
+    volumes:
+      - mysql-data:/var/lib/mysql
 
-  sala-service:
-    build: ./sala-service
+  app:
+    build: .
+    container_name: spring_app
     ports:
-      - "8082:8080"
-    depends_on:
-      - sala-db
-      - rabbitmq
-
-  sala-db:
-    image: mysql:8
+      - "8080:8080"
     environment:
-      MYSQL_DATABASE: sala
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3308:3306"
-
-  reserva-service:
-    build: ./reserva-service
-    ports:
-      - "8083:8080"
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/ambienteseTest?createDatabaseIfNotExist=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
     depends_on:
-      - reserva-db
-      - rabbitmq
+      - db
 
-  reserva-db:
-    image: mysql:8
-    environment:
-      MYSQL_DATABASE: reserva
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3309:3306"
-
-  rabbitmq:
-    image: rabbitmq:3-management
-    ports:
-      - "5672:5672"
-      - "15672:15672"
+volumes:
+  mysql-data:
